@@ -1,0 +1,46 @@
+# .gitignore para proyecto WordPress usando DDEV
+# Mantener la carpeta .ddev en el repositorio (contiene la configuración del entorno)
+
+# Editor/IDE
+.idea/
+.vscode/
+
+# Node / Composer / build
+node_modules/
+vendor/
+/.sass-cache/
+/build/
+/dist/
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime
+*.log
+/coverage/
+/.phpunit.result.cache
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# WordPress uploads, cache and temporary folders
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backups/
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+
+# Project-specific
+sftp-config.json
+
+# DDEV runtime artifacts (no ignorar la configuración en .ddev/)
+.ddev/.ssh/
+.ddev/.db/
+.ddev/import-db.sql

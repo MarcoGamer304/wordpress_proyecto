@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "slider-antes-despues/image-comparison",
+    "version": "1.0.0",
+    "title": "Slider de Imágenes Antes/Después",
+    "category": "media",
+    "icon": "format-image",
+    "description": "Bloque interactivo para comparar dos imágenes",
+    "keywords": ["slider", "comparacion", "antes", "despues", "imagen"],
+    "textdomain": "slider-antes-despues",
+    "attributes": {
+        "imgAntesId": {
+            "type": "number",
+            "default": 0
+        },
+        "imgAntesUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imgDespuesId": {
+            "type": "number",
+            "default": 0
+        },
+        "imgDespuesUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "colorDivisor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "orientacion": {
+            "type": "string",
+            "default": "horizontal"
+        }
+    },
+    "supports": {
+        "align": ["wide", "full"],
+        "html": false
+    },
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/style-index.css",
+    "style": "file:./build/style-index.css",
+    "viewScript": "file:./build/view.js"
+}

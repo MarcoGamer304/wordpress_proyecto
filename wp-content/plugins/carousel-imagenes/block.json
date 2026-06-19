@@ -1,0 +1,64 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "carousel-imagenes/image-carousel",
+    "version": "1.0.0",
+    "title": "Carrusel de Imágenes",
+    "category": "media",
+    "icon": "format-gallery",
+    "description": "Bloque interactivo para crear carruseles de imágenes con animaciones, altura ajustable y ancho 100vw.",
+    "keywords": ["carrusel", "carousel", "slider", "imagenes", "animacion"],
+    "textdomain": "carousel-imagenes",
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": [],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "alt": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "altura": {
+            "type": "string",
+            "default": "500px"
+        },
+        "animacion": {
+            "type": "string",
+            "default": "fade"
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": true
+        },
+        "intervalo": {
+            "type": "number",
+            "default": 3000
+        },
+        "mostrarIndicadores": {
+            "type": "boolean",
+            "default": true
+        },
+        "mostrarFlechas": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "align": ["wide", "full"],
+        "html": false
+    },
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/style-index.css",
+    "style": "file:./build/style-index.css",
+    "viewScript": "file:./build/view.js"
+}
